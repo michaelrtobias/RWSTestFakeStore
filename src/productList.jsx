@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
-import style from "styled-components";
-
-export default function ProductList() {
-  return <div>Product List Rendered</div>;
+import styled from "styled-components";
+import ProductEntry from "./productEntry.jsx";
+export default function ProductList(props) {
+  return (
+    <div>
+      {props.products.map((product) => (
+        <ProductEntry product={product} key={product.id} />
+      ))}
+    </div>
+  );
 }
