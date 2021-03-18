@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose -u",
     "build": "webpack --config webpack.config.js -w",
     "start": "nodemon ./server/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/michaelrtobias/RWSTestFakeStore.git"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./spec/setupTests.js"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +30,8 @@
     "axios": "^0.21.1",
     "css-loader": "^5.1.3",
     "dotenv": "^8.2.0",
+    "jsdom": "^16.5.1",
+    "jsdom-global": "^3.0.2",
     "nodemon": "^2.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -31,9 +41,14 @@
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.1",
     "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3",
     "json-loader": "^0.5.7",
     "webpack": "^5.26.1",
     "webpack-cli": "^4.5.0"

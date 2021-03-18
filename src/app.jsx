@@ -4,6 +4,7 @@ import axios from "axios";
 import ProductList from "./productList.jsx";
 import SearchBar from "./search.jsx";
 import ProductPage from "./productPage.jsx";
+import API_KEY from "./config/API_key.js";
 const rotate360 = keyframes`
   from {
     transform: rotate(0deg);
@@ -40,7 +41,7 @@ export default function App() {
         "https://demo34107.appliances.dev.rwsgateway.com/FRONT-END-DEV-PRODUCT-TEST",
         {
           params: {
-            test_api_key: "DBWOSJJBZCQSIJMYKNGEYSRTPFIAVOPVBVGUSUJPFRSHKGWVWB",
+            test_api_key: API_KEY,
           },
         }
       )
