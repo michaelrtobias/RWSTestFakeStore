@@ -2,7 +2,7 @@
 
 ## Welcome to Michael's Market!!!
 
-### Michael's MArket is an e-commerce applictaion uilt with react
+### Michael's Market is an e-commerce applictaion uilt with react
 
 ##### Below are are few scripts to run and or test the application
 
