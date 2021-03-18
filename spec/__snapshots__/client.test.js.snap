@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`productlist snapshot renders 1`] = `
+<div>
+  <div>
+    <div>
+      <SearchBar
+        setFilterTerm={[Function]}
+      />
+    </div>
+    <div>
+      <styled.div>
+        <h3>
+          Loading....
+        </h3>
+        <styled.div />
+      </styled.div>
+    </div>
+  </div>
+</div>
+`;
