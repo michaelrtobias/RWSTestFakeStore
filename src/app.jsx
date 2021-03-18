@@ -33,6 +33,11 @@ const LoadingZone = styled.div`
   flex-direction: row;
 `;
 
+const BlackHeaderBar = styled.div`
+  background-color: black;
+  margin: 10px;
+  font-size: 10px;
+`;
 export default function App() {
   const [products, setProducts] = useState([]);
   const getAllProducts = () => {
@@ -59,10 +64,16 @@ export default function App() {
   const [clickedProduct, setClickedProduct] = useState({});
   const renderView = () => {
     if (view === "product") {
-      return <ProductPage setView={setView} clickedProduct={clickedProduct} />;
+      return (
+        <div>
+          <BlackHeaderBar>Hello</BlackHeaderBar>
+          <ProductPage setView={setView} clickedProduct={clickedProduct} />
+        </div>
+      );
     } else if (view === "list") {
       return (
         <div>
+          <BlackHeaderBar>Hello</BlackHeaderBar>
           <div>
             <SearchBar setFilterTerm={setFilterTerm} />
           </div>
