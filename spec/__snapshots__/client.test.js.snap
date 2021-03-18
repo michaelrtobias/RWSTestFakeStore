@@ -3,6 +3,9 @@
 exports[`productlist snapshot renders 1`] = `
 <div>
   <div>
+    <styled.div>
+      Hello
+    </styled.div>
     <div>
       <SearchBar
         setFilterTerm={[Function]}
