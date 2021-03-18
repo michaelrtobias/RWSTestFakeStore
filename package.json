@@ -6,7 +6,10 @@
   "scripts": {
     "test": "jest --verbose -u",
     "build": "webpack --config webpack.config.js -w",
-    "start": "nodemon ./server/index.js"
+    "buildForDeploy": "webpack --config webpack.config.js",
+    "start": "nodemon ./server/index.js",
+    "s3deploy": "aws s3 sync --acl public-read public/ s3://rws-take-home-assessment",
+    "deploy": " npm run buildForDeploy && npm run s3deploy"
   },
   "repository": {
     "type": "git",
